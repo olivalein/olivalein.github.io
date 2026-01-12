@@ -1181,6 +1181,10 @@ main {
   word-break: break-word;
 }
 
+.main-content article header {
+  padding-right: 220px;
+}
+
 
 /*-----------------------------------*\
   #CONTACT
