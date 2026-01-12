@@ -1083,7 +1083,15 @@ main {
   }
 }
 
+/*-----------------------------------*\
+  #CERTIFICATIONS
+\*-----------------------------------*/
 
+.article-title {
+  max-width: calc(100% - 160px);
+  white-space: normal;
+  word-break: break-word;
+}
 
 /*-----------------------------------*\
   #BLOG
