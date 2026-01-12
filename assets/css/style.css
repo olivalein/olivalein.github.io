@@ -1083,15 +1083,7 @@ main {
   }
 }
 
-/*-----------------------------------*\
-  #CERTIFICATIONS
-\*-----------------------------------*/
 
-.article-title {
-  max-width: calc(100% - 160px);
-  white-space: normal;
-  word-break: break-word;
-}
 
 /*-----------------------------------*\
   #BLOG
@@ -1178,7 +1170,16 @@ main {
 }
 
 
+/*-----------------------------------*\
+  #CERTIFICATIONS
+\*-----------------------------------*/
 
+.article-title {
+  display: inline-block;
+  max-width: calc(100% - 180px);
+  white-space: normal;
+  word-break: break-word;
+}
 
 
 /*-----------------------------------*\
