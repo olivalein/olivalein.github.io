@@ -128,27 +128,19 @@ const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
-navigationLinks.forEach(link => {
-  link.addEventListener("click", () => {
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
 
-    // Quitar active de todos los botones
-    navigationLinks.forEach(btn => btn.classList.remove("active"));
-
-    // Quitar active de todas las páginas
-    pages.forEach(page => page.classList.remove("active"));
-
-    // Activar botón actual
-    link.classList.add("active");
-
-    // Activar la página correcta
-    const pageName = link.textContent.trim().toLowerCase();
-
-    pages.forEach(page => {
-      if (page.dataset.page === pageName) {
-        page.classList.add("active");
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
       }
-    });
+    }
 
   });
-});
 }
