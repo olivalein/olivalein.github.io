@@ -1946,3 +1946,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/* Arreglo específico para el título de Certificaciones */
+.certifications .article-title {
+  font-size: 22px !important; /* Fuerza un tamaño menor solo aquí */
+  line-height: 1.2;           /* Ajusta el espaciado vertical */
+  margin-top: 10px;          /* Lo baja un poquito para que respire */
+}
