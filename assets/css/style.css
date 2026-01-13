@@ -1754,12 +1754,17 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   main { margin-bottom: 60px; }
 
-  .main-content {
-    position: relative;
-    width: max-content;
-    margin: auto;
+ .main-content article header {
+    /* Aumentamos de 220px a 350px para asegurar que el texto no toque el menú */
+    padding-right: 350px; 
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
   }
-
+	
+/* Opcional: Si el título es muy largo, forzamos que baje de línea antes */
+  .article-title {
+    width: 100%;
+    white-space: normal; 
+  }
 
 
   /**
