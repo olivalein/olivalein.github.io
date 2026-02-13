@@ -1,7 +1,4 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
 
-gem "jekyll"
-
-# gem "rails"
+# Esta línea es la clave: usa la versión estándar de GitHub Pages
+gem "github-pages", group: :jekyll_plugins
