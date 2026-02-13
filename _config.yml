@@ -1,0 +1,20 @@
+name: "Tu Nombre o Nick"
+baseurl: "" # Déjalo vacío si es el dominio principal
+url: "https://olivalein.github.io"
+
+# Jekyll convertirá los archivos en _posts a esta ruta:
+permalink: /blog/:title/
+
+# Configuración para que no explote con tus payloads de HTB
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - .obsidian/  # Muy importante para que no subas config de Obsidian

