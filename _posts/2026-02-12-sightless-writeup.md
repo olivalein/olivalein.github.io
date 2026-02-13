@@ -231,7 +231,7 @@ Session completed.
 
 Como se observa en john, la contraseña es `bulldogs`, procedemos a entrar a la base de datos; Se procede a instalar `kpcli` con `sudo apt install kpcli`
 
-![](/assets/images/writeups/Pasted image 20260211210140.png]]
+![](/assets/images/writeups/Pasted image 20260211210140.png)
 
 Enumerando la base de datos, una contraseña y un id_rsa, obtenemos el id_rsa con keepass y el comando  `attach ssh`
 
