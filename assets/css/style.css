@@ -2278,3 +2278,108 @@ pre code {
   font-family: 'JetBrains Mono', 'Fira Code', monospace; /* Mantiene la fuente de código */
   font-weight: bold; /* Opcional: negrita para que se distinga sutilmente */
 }
+
+/* Contenedor principal */
+.cert-container {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* La Tarjeta con los colores de tu plantilla */
+.cert-card {
+  display: flex;
+  background: var(--bg-gradient-jet); /* El degradado oscuro de tus secciones */
+  border: 1px solid var(--jet); /* El borde estándar de tu sidebar/artículos */
+  border-radius: 20px;
+  padding: 30px;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition-1); /* Transición suave estándar */
+  box-shadow: var(--shadow-2);
+}
+
+/* El efecto HOVER con tu amarillo estándar */
+.cert-card:hover {
+  border-color: var(--orange-yellow-crayola); /* Brillo amarillo en el borde */
+  transform: translateY(-2px);
+}
+
+/* Imagen de la certificación */
+.cert-badge img {
+  width: 120px;
+  height: auto;
+  /* Sombra sutil con tu color amarillo */
+  filter: drop-shadow(0 0 8px hsla(45, 100%, 72%, 0.15));
+}
+
+/* Textos adaptados a tu tipografía */
+.cert-title {
+  color: var(--white-2);
+  margin-bottom: 8px;
+}
+
+.cert-issuer {
+  color: var(--orange-yellow-crayola); /* Nombre del emisor en amarillo */
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.cert-description {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Chips de habilidades */
+.cert-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.skill-chip {
+  background: var(--onyx);
+  color: var(--light-gray-70);
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: var(--fs-8);
+  border: 1px solid var(--jet);
+}
+
+/* Botón con el estilo de tu página */
+.cert-button {
+  display: inline-block;
+  color: var(--orange-yellow-crayola);
+  background: var(--border-gradient-onyx);
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  border: 1px solid var(--jet);
+  transition: var(--transition-1);
+}
+
+.cert-button:hover {
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+}
+
+/* Responsive */
+@media (max-width: 580px) {
+  .cert-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .cert-skills {
+    justify-content: center;
+  }
+}

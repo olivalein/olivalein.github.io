@@ -154,34 +154,34 @@ Dónde la misma página nos dice que debemos hacer el challenge para logearnos.<
 
 <p>Luego de que estamos en la página para entrar el código de invitación, abrimos las opciones de desarrollador del navegador, y encontramos algo interesante, un archivo llamado <span style="color: 7435F0;">inviteapi.min.js</span> el cuál si abrimos, vemos un código de javascript ofuscado, el cuál podemos desofuscar con <a href="https://lelinhtinh.github.io/de4js/">de4js</a> solo tenemos que pegare código y darle a Auto decode. En seguida nos muestra el código desofuscado:</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">verifyInviteCode</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">verifyInviteCode</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">formData</span> <span class="o">=</span> <span class="p">{</span>
         <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="nx">code</span>
     <span class="p">};</span>
-    <span class="nx">$</span><span class="p">.</span><span class="nf">ajax</span><span class="p">({</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
         <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
         <span class="na">dataType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">json</span><span class="dl">"</span><span class="p">,</span>
         <span class="na">data</span><span class="p">:</span> <span class="nx">formData</span><span class="p">,</span>
         <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/api/v1/invite/verify</span><span class="dl">'</span><span class="p">,</span>
-        <span class="na">success</span><span class="p">:</span> <span class="nf">function </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+        <span class="na">success</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
         <span class="p">},</span>
-        <span class="na">error</span><span class="p">:</span> <span class="nf">function </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+        <span class="na">error</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">})</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nf">makeInviteCode</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">$</span><span class="p">.</span><span class="nf">ajax</span><span class="p">({</span>
+<span class="kd">function</span> <span class="nx">makeInviteCode</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
         <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
         <span class="na">dataType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">json</span><span class="dl">"</span><span class="p">,</span>
         <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/api/v1/invite/how/to/generate</span><span class="dl">'</span><span class="p">,</span>
-        <span class="na">success</span><span class="p">:</span> <span class="nf">function </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+        <span class="na">success</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
         <span class="p">},</span>
-        <span class="na">error</span><span class="p">:</span> <span class="nf">function </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+        <span class="na">error</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">})</span>
 <span class="p">}</span>
