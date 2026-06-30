@@ -1,6 +1,6 @@
 ---
 layout: post 
-title: "THM: Summit" 
+title: "Summit Writeup" 
 date: 2026-06-12 
 categories: [Blue Team, SOC, Linux]
 image: /assets/images/summit-1.png
