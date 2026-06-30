@@ -3,7 +3,7 @@ layout: post
 title: "THM: Summit" 
 date: 2026-06-12 
 categories: [Blue Team, SOC, Linux]
-image: "/assets/images/summit.png"
+image: /assets/images/summit.png
 description: "Resolviendo la Room Summit de TryHackMe..."
 ---
 ## Objetivo
