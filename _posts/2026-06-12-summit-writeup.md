@@ -1,12 +1,11 @@
-
---------------
+---
 layout: post 
 title: "THM: Summit" 
 date: 2026-06-12 
 categories: [Blue Team, SOC, Linux]
 image: "/assets/images/summit.png"
 description: "Resolviendo la Room Summit de TryHackMe..."
-----------------------------
+---
 ## Objetivo
 
 En este laboratorio, PicoSecure plantea una simulación de amenazas enfocado en las capacidades de detección de malware. Para ello se trabaja en un entorno purple team, donde un pentester externo intenta ejecutar muestras maliciosas 
