@@ -2,7 +2,7 @@
 layout: post 
 title: "Summit Writeup" 
 date: 2026-06-12 
-categories: [Blue Team, SOC, Linux]
+categories: [TryHackMe, BlueTeam, SOC, Linux]
 image: /assets/images/summit-1.png
 description: "Resolviendo la Room Summit de TryHackMe..."
 ---
